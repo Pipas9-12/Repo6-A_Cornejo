@@ -44,6 +44,7 @@
     .buttons {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 15px;
     }
 
     .buttons button {
@@ -59,6 +60,20 @@
     .buttons button:hover {
       background-color: #0056b3;
     }
+
+    .volver-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .volver-button:hover {
+      background-color: #5a6268;
+    }
   </style>
 </head>
 <body>
@@ -69,11 +84,10 @@
       <input type="text" id="apellido" name="apellido" placeholder="Escribe un apellido" required>
 
       <div class="buttons">
-        <button type="button" onclick="alert('Listar')">Agregar</button>
+        <button type="button" onclick="alert('Agregar usuario')">Agregar</button>
         <button type="button" onclick="alert('Modificar usuario')">Modificar</button>
       </div>
 
-      <!-- Botón Volver -->
       <button type="button" class="volver-button" onclick="window.location.href='index.html'">Volver</button>
     </form>
   </div>
