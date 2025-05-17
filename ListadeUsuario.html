@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Usuarios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0077b6;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #0077b6;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .delete-icon {
+      cursor: pointer;
+      color: #d9534f;
+      font-size: 18px;
+    }
+
+    .volver-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .volver-button:hover {
+      background-color: #5a6268;
+    }
+  </style>
+  <!-- Iconos desde Font Awesome CDN -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Lista de Usuarios Registrados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Teléfono</th>
+          <th>Email</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Datos de ejemplo -->
+        <tr>
+          <td>Juan</td>
+          <td>Pérez</td>
+          <td>123456789</td>
+          <td>juanperez@email.com</td>
+          <td><i class="fas fa-trash delete-icon" title="Eliminar"></i></td>
+        </tr>
+        <tr>
+          <td>Ana</td>
+          <td>García</td>
+          <td>987654321</td>
+          <td>ana@email.com</td>
+          <td><i class="fas fa-trash delete-icon" title="Eliminar"></i></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="volver-button" onclick="window.location.href='index.html'">Volver</button>
+  </div>
+</body>
+</html>
