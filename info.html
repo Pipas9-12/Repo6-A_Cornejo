@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Protocolo ARINC 429</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #bbdefb);
+      color: #333;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #0d47a1;
+      margin-top: 30px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .highlight {
+      background-color: #e3f2fd;
+      padding: 10px;
+      border-left: 4px solid #2196f3;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Protocolo ARINC 429</h1>
+    <p>Comunicación robusta en sistemas de aviónica</p>
+  </header>
+
+  <main>
+    <p>ARINC 429 es un protocolo de comunicación digital utilizado en aeronaves para la transmisión unidireccional de datos entre sistemas electrónicos. Es ampliamente adoptado por su simplicidad, robustez y compatibilidad entre fabricantes.</p>
+
+    <h2>Características Principales</h2>
+    <ul>
+      <li>Transmisión simplex: un transmisor, múltiples receptores (hasta 20).</li>
+      <li>Velocidades estándar: 12.5–14.5 kbps y 100 kbps.</li>
+      <li>Codificación Return-to-Zero (RZ) con niveles de +10 V, 0 V, -10 V.</li>
+      <li>Uso de cable par trenzado con señalización diferencial.</li>
+    </ul>
+
+    <h2>Estructura de la Palabra</h2>
+    <div class="highlight">
+      Cada mensaje contiene 32 bits distribuidos en campos: <strong>LABEL</strong> (1–8), <strong>SDI</strong> (9–10), <strong>DATA</strong> (11–29), <strong>SSM</strong> (30–31), y <strong>Paridad</strong> (32).
+    </div>
+
+    <h2>Tipos de Codificación</h2>
+    <ul>
+      <li><strong>BNR</strong> (Binary Number Representation)</li>
+      <li><strong>BCD</strong> (Binary-Coded Decimal)</li>
+      <li><strong>Datos discretos</strong>: ON/OFF, banderas</li>
+    </ul>
+
+    <h2>Determinismo y Frecuencia</h2>
+    <p>El protocolo garantiza que cada etiqueta tenga una frecuencia mínima y máxima de transmisión, y asegura sincronización con pausas entre palabras.</p>
+
+    <h2>Aplicación y Simulación</h2>
+    <p>Las simulaciones permiten validar software y entrenar sin necesidad de hardware físico, lo que amplía su uso en laboratorios y entornos educativos.</p>
+
+    <h2>Conclusión</h2>
+    <p>ARINC 429 sigue siendo esencial en aviónica por su confiabilidad, sencillez y precisión. Su implementación en simuladores fortalece su papel en formación y validación técnica.</p>
+  </main>
+
+  <footer>
+    © 2025 - Página educativa sobre ARINC 429
+  </footer>
+</body>
+</html>
