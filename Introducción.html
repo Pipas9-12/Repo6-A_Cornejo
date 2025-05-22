@@ -1,96 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Banco de pruebas ARINC enterprise</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #1e3c72, #2a5298);
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      color: #ffd700;
-    }
-    main {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 1rem;
-    }
-    section {
-      margin-bottom: 2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: rgba(0, 0, 0, 0.4);
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es ARINC 429?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 20px;
+            color: #222;
+        }
+        h1, h2 {
+            color: #004080;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Banco De Pruebas ARINC 429</h1>
-    <p>Proyecto de Integración entre Tecnologías Web, Electrónica y Aeronáutica</p>
-  </header>
+    <h1>¿Qué es ARINC 429?</h1>
+    <p>
+        ARINC 429 es el sistema que usan las aeronaves para que sus distintas partes electrónicas puedan comunicarse entre sí. Por ejemplo, así se envían datos como la altitud, el rumbo o la velocidad entre los instrumentos del avión.
+    </p>
 
-  <main>
-    <section>
-      <h2>🌍 ¿De qué trata este proyecto?</h2>
-      <p>Este proyecto busca simular el funcionamiento real de un instrumento aeronáutico, utilizando una combinación de tecnologías modernas. Por ejemplo, se podría representar una <strong>brújula magnética</strong>, la cual puede recibir direcciones desde una <strong>página web interactiva</strong>.</p>
-    </section>
+    <h2>¿Para qué se usa?</h2>
+    <p>
+        Sirve para enviar información de forma segura y ordenada, evitando interferencias, de un equipo a otro dentro del avión. Así, todo funciona bien y los pilotos reciben los datos correctos.
+    </p>
 
-    <section>
-      <h2>🧭 ¿Cómo funciona?</h2>
-      <p>El sistema está compuesto por varios módulos conectados entre sí:</p>
-      <ul>
-        <li><strong>1. Interfaz Web:</strong> El usuario ingresa una dirección deseada (por ejemplo: 270° Oeste) directamente desde una página web visual.</li>
-        <li><strong>2. Servidor:</strong> Esa información es enviada a un servidor local, que la procesa y la prepara para transmitirla.</li>
-        <li><strong>3. Arduino + Transceptor ARINC 429:</strong> Un microcontrolador Arduino recibe la dirección desde el servidor, la codifica según el protocolo ARINC 429 y la transmite mediante un <em>transceptor especializado</em>.</li>
-        <li><strong>4. Instrumento Real:</strong> Finalmente, un instrumento físico (una brújula electrónica real de avión) recibe esta señal y cambia su lectura según el valor ingresado desde la web.</li>
-      </ul>
-    </section>
+    <h2>¿Cómo funciona?</h2>
+    <p>
+        ARINC 429 envía mensajes que siempre tienen 32 “bits” . Esos bits dicen qué tipo de dato se está mandando (como rumbo, altitud, etc) y cuál es su valor.
+    </p>
+    <p>
+        Cada equipo puede enviar datos a muchos otros receptores(hasta 20), y los datos pueden enviarse muy seguido o solo cuando haga falta. Además, este sistema tiene un control que revisa si los datos llegan bien.
+    </p>
 
-    <section>
-      <h2>⚙️ ¿Qué es ARINC 429?</h2>
-      <p><strong>ARINC 429</strong> es un protocolo de comunicación utilizado en aeronaves reales. Se encarga de transmitir información crítica entre instrumentos de vuelo, garantizando precisión, velocidad y confiabilidad. Este proyecto lo utiliza para simular una integración <em>casi real</em> de una cabina de avión.</p>
-    </section>
+    <h2>¿Qué tan rápido trabaja?</h2>
+    <p>
+        Algunos datos importantes se mandan muy seguido, por ejemplo cada 50 milisegundos. Otros menos urgentes, cada medio segundo(500 milisegundos). La velocidad de transmisión puede ser rápida (100 kbps) o más lenta (12-14.5 kbps).
+    </p>
 
-    <section>
-      <h2>💡 ¿Por qué es interesante?</h2>
-      <p>Este proyecto demuestra cómo una tecnología usada en la aviación real puede ser simulada, comprendida y controlada desde herramientas simples como una página web. Es una prueba clara de cómo el mundo digital se conecta con el mundo físico.</p>
-      <p>Además, permite:</p>
-      <ul>
-        <li>Visualizar cómo funcionan los sistemas embarcados en aeronaves.</li>
-        <li>Interactuar de forma remota con instrumentos reales.</li>
-        <li>Aprender sobre codificación, protocolos de comunicación y sistemas distribuidos.</li>
-      </ul>
-    </section>
+    <h2>¿Cómo se escriben los datos?</h2>
+    <p>
+        Los datos se mandan en diferentes formas según el tipo:
+    </p>
+    <ul>
+        <li><strong>BNR:</strong> Para valores como altitud o temperatura.</li>
+        <li><strong>BCD:</strong> Para números con decimales, como los grados del rumbo.</li>
+        <li><strong>Discretos:</strong> Para cosas que están prendidas o apagadas, como interruptores.</li>
+    </ul>
 
-    <section>
-      <h2>🔧 Posibilidades Futuras</h2>
-      <p>Este concepto se puede ampliar fácilmente para simular más instrumentos como el altímetro, velocímetro o horizonte artificial. Incluso se podría integrar a un simulador de vuelo completo, con retroalimentación visual y física.</p>
-    </section>
-  </main>
+    <h2>¿Por qué es tan usado?</h2>
+    <p>
+        Porque hace que los equipos de distintas funciones y marcas puedan trabajar juntos dentro del avión. Gracias a esto, los sistemas son más seguros y compatibles entre sí, algo muy importante para volar.
+    </p>
 
-  <footer>
-    <p>Desarrollado por un estudiante de aviónica apasionado por la tecnología y la aeronáutica ✈️</p>
-  </footer>
+    <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1CsPSoqVtKE" 
+        title="Video explicativo de ARINC 429" frameborder="0" allowfullscreen></iframe>
+    </div>
 
 </body>
 </html>
