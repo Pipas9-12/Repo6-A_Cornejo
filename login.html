@@ -74,7 +74,7 @@
 <body>
   <div class="login-container">
     <h2>Iniciar Sesión</h2>
-    <form action="/login" method="post">
+    <form onsubmit="return redirigirAlIndex(event)">
       <label for="username">Usuario</label>
       <input type="text" id="username" name="username" required>
 
@@ -87,5 +87,24 @@
       <p>¿No tienes cuenta? <a href="singup.html">Regístrate</a></p>
     </div>
   </div>
+
+  <script>
+    function redirigirAlIndex(event) {
+      event.preventDefault(); // Evita enviar el formulario
+
+      // Opcional: Validación extra (por si querés mostrar alertas)
+      const usuario = document.getElementById('username').value.trim();
+      const contrasena = document.getElementById('password').value.trim();
+
+      if (usuario === '' || contrasena === '') {
+        alert('Por favor completa todos los campos.');
+        return false;
+      }
+
+      // Redirige al index
+      window.location.href = "index.html";
+      return false;
+    }
+  </script>
 </body>
 </html>
