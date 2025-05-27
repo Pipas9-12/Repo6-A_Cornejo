@@ -49,10 +49,22 @@
       background-color: #f1f1f1;
     }
 
-    .delete-icon {
+    .action-icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .delete-icon, .edit-icon {
       cursor: pointer;
-      color: #d9534f;
       font-size: 18px;
+    }
+
+    .delete-icon {
+      color: #d9534f;
+    }
+
+    .edit-icon {
+      color: #5bc0de;
     }
 
     .volver-button {
@@ -83,7 +95,7 @@
           <th>Apellido</th>
           <th>Teléfono</th>
           <th>Email</th>
-          <th>Acción</th>
+          <th>Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -93,14 +105,24 @@
           <td>Pérez</td>
           <td>123456789</td>
           <td>juanperez@email.com</td>
-          <td><a href="index.html"><i class="fas fa-trash delete-icon" title="Eliminar"></i></a></td>
+          <td>
+            <div class="action-icons">
+              <a href="index.html"><i class="fas fa-pencil-alt edit-icon" title="Editar"></i></a>
+              <a href="index.html"><i class="fas fa-trash delete-icon" title="Eliminar"></i></a>
+            </div>
+          </td>
         </tr>
         <tr>
           <td>Ana</td>
           <td>García</td>
           <td>987654321</td>
           <td>ana@email.com</td>
-          <td><a href="index.html"><i class="fas fa-trash delete-icon" title="Eliminar"></i></a></td>
+          <td>
+            <div class="action-icons">
+              <a href="index.html"><i class="fas fa-pencil-alt edit-icon" title="Editar"></i></a>
+              <a href="index.html"><i class="fas fa-trash delete-icon" title="Eliminar"></i></a>
+            </div>
+          </td>
         </tr>
       </tbody>
     </table>
