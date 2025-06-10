@@ -8,10 +8,11 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #e0f7fa, #ffffff);
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 20px;
     }
 
     .container {
@@ -20,12 +21,35 @@
       border-radius: 15px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       text-align: center;
-      width: 400px;
+      width: 80%;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+
+    .javascript-section {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 80%;
+      max-width: 800px;
     }
 
     h1 {
       margin-bottom: 30px;
       color: #00796b;
+    }
+
+    h2 {
+      color: #00796b;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .links-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
 
     a {
@@ -34,30 +58,67 @@
       color: white;
       background-color: #00796b;
       padding: 12px;
-      margin: 10px 0;
+      margin: 5px 0;
       border-radius: 8px;
       transition: background-color 0.3s ease;
       font-size: 16px;
+      text-align: center;
     }
 
     a:hover {
       background-color: #004d40;
+      transform: translateY(-2px);
+    }
+
+    .main-links {
+      display: flex;
+      flex-direction: column;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Bienvenido al Índice</h1>
-    <a href="Presentacion.html">Presentación</a>
-    <a href="Mjamigos.html">Mejores amigos</a>
-    <a href="comidas.html">Comidas favoritas</a>
-    <a href="login.html">Log In</a>
-    <a href="singup.html">Sign Up</a>
-    <a href="Buscarusuario.html">Buscar Usuario</a>
-    <a href="Agregarusuario.html">Agregar Usuario</a>
-    <a href="ListadeUsuario.html">LIsta de Usuarios</a>
+    <div class="main-links">
+      <a href="Presentacion.html">Presentación</a>
+      <a href="Mjamigos.html">Mejores amigos</a>
+      <a href="comidas.html">Comidas favoritas</a>
+      <a href="login.html">Log In</a>
+      <a href="singup.html">Sign Up</a>
+      <a href="Buscarusuario.html">Buscar Usuario</a>
+      <a href="Agregarusuario.html">Agregar Usuario</a>
+      <a href="ListadeUsuario.html">Lista de Usuarios</a>
+    </div>
+  </div>
 
-  
+  <div class="javascript-section">
+    <h2>Ejercicios de JavaScript</h2>
+    <div class="links-container">
+      <a href="ejer1.html">Ejercicio 1 - Variables</a>
+      <a href="ejer2-1.html">Ejercicio 2 - Operadores</a>
+      <a href="ejer2-4.html">Ejercicio 3 - If-Else</a>
+      <a href="ejer2-5.html">Ejercicio 4 - Switch</a>
+      <a href="ejer2-6.html">Ejercicio 5 - For Loop</a>
+      <a href="ejer2-7.html">Ejercicio 6 - While Loop</a>
+      <a href="ejer3-1.html">Ejercicio 7 - Funciones</a>
+      <a href="ejer3-2.html">Ejercicio 8 - Arrays</a>
+      <a href="ejer3-3.html">Ejercicio 9 - Objetos</a>
+      <a href="ejer4-1.html">Ejercicio 10 - Eventos</a>
+      <a href="ejer4-2.html">Ejercicio 11 - DOM</a>
+      <a href="ejer5-1.html">Ejercicio 12 - String Methods</a>
+      <a href="ejer5-2.html">Ejercicio 13 - Number Methods</a>
+      <a href="ejer6-1.html">Ejercicio 14 - Math Object</a>
+      <a href="ejer7-1.html">Ejercicio 15 - Date Object</a>
+      <a href="ejer8-1.html">Ejercicio 16 - Arrow Functions</a>
+      <a href="ejer8-2.html">Ejercicio 17 - Callbacks</a>
+      <a href="ejer8-3.html">Ejercicio 18 - Promises</a>
+      <a href="ejer9-1.html">Ejercicio 19 - Async/Await</a>
+      <a href="ejer9-2.html">Ejercicio 20 - Local Storage</a>
+      <a href="9-3.html">Ejercicio 21 - JSON</a>
+      <a href="ejer9-4.html">Ejercicio 22 - AJAX</a>
+      <a href="ejer9-5.html">Ejercicio 23 - Fetch API</a>
+      <a href="ejer9-6.html">Ejercicio 24 - ES6 Classes</a>
+    </div>
   </div>
 </body>
 </html>
