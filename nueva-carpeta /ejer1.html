@@ -1,0 +1,11 @@
+
+<script type="text/javascript">
+  var myVar = "global"; // Variable global
+  
+  function checkscope() {
+    var myVar = "local"; // Variable local (oculta la global)
+    document.write(myVar); // Imprime "local"
+  }
+
+  checkscope(); // Llama a la función para ejecutarla
+</script>
